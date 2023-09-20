@@ -78,7 +78,14 @@ def main(parsed_args):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Video interpolation")
+    parser = argparse.ArgumentParser(
+        description="""Video interpolation.
+
+    Example:
+
+    python cli.py --n 2 --path example/ --format jpg --output sample-output/
+    """
+    )
     parser.add_argument("--model", default="ours_t", type=str)
     parser.add_argument("--n", default=16, type=int)
     parser.add_argument("--path", help="Path to frames", type=str)
