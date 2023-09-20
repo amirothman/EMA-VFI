@@ -1,0 +1,5 @@
+ipython=~8.15.0
+scikit-image=~0.21.0
+timm=~0.9.7
+torch=~2.0.1
+tqdm=~4.66.1
