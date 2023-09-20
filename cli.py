@@ -43,7 +43,9 @@ def main(parsed_args):
 
     frame_counter = 0
 
-    for frame_1, frame_2 in tqdm(zip(frames, frames[1:]), desc="Interpolating frames"):
+    for frame_1, frame_2 in tqdm(
+        zip(frames, frames[1:]), desc="Interpolating frames", total=len(frames)
+    ):
         I0 = cv2.imread(frame_1)
         I2 = cv2.imread(frame_2)
 
